@@ -1,0 +1,26 @@
+import math
+
+def numbers(x):
+    i = 1
+    while True:
+        yield i
+        i += 2
+        if i > x:
+            return
+
+
+nl = (list(numbers(x)))
+
+
+def factors(k):
+    for n in range(k):
+        if k % abs(n+1) == 0:
+            yield n+1
+            n += 1
+            if abs(n) > k+1000000000:
+                return
+
+for k in range(#anynumber):
+    if len(list(factors(k))) == 2:
+        print (k)
+
